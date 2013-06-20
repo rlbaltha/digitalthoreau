@@ -1,0 +1,5 @@
+digitalthoreau_user:
+    resource: "@DigitalthoreauUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
