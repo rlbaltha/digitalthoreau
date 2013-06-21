@@ -1,0 +1,22 @@
+{# Digitalthoreau/FileBundle/Resources/views/File/new.html.twig #}
+
+{% extends 'DigitalthoreauFileBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>File creation</h1>
+
+    <form action="{{ path('file_create') }}" method="post" {{ form_enctype(form) }} novalidate="novalidate">
+        {{ form_widget(form) }}
+        <p>
+            <button type="submit">Create</button>
+        </p>
+    </form>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('file') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

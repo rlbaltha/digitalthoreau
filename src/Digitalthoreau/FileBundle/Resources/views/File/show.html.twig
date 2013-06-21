@@ -1,0 +1,44 @@
+{# Digitalthoreau/FileBundle/Resources/views/File/show.html.twig #}
+
+{% extends 'DigitalthoreauFileBundle::layout.html.twig' %}
+
+{% block body -%}
+    <h1>File</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ entity.type }}</td>
+            </tr>
+            <tr>
+                <th>Path</th>
+                <td>{{ entity.path }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="inline">
+    <li>
+        <a class="btn" href="{{ path('file') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a  class="btn" href="{{ path('file_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('file_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button  class="btn" type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+{% endblock %}

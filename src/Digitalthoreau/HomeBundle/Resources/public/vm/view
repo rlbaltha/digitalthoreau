@@ -1,0 +1,196 @@
+<!--oooooooooooooooooooooooooooooooooooo--> 
+<!-- Document Type Definition for Diplomatic Encoding of Walden --> 
+<!-- Created by DH 4888/6888 -->  
+<!--oooooooooooooooooooooooooooooooooooo--> 
+ 
+<!ELEMENT page (body|r_mar|l_mar|damage)*> 
+ 
+<!ELEMENT body (text|marking)*>
+<!--CDATA here will be grid marks--> 
+<!ATTLIST body hor_start_position CDATA #REQUIRED>
+<!ATTLIST body hor_end_position CDATA #REQUIRED>
+<!ATTLIST body vert_start_position CDATA #REQUIRED>
+<!ATTLIST body vert_end_position CDATA #REQUIRED>
+ 
+ 
+<!ELEMENT r_mar (marking|deletion|insertion)*>
+<!ATTLIST r_mar hor_start_position CDATA #REQUIRED>
+<!ATTLIST r_mar hor_end_position CDATA #REQUIRED>
+<!ATTLIST r_mar vert_start_position CDATA #REQUIRED>
+<!ATTLIST r_mar vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT l_mar (marking|deletion|insertion)*>
+<!ATTLIST l_mar hor_start_position CDATA #REQUIRED>
+<!ATTLIST l_mar hor_end_position CDATA #REQUIRED>
+<!ATTLIST l_mar vert_start_position CDATA #REQUIRED>
+<!ATTLIST l_mar vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT damage EMPTY>
+<!ATTLIST damage type (CDATA|blot|smear|hole) #REQUIRED>
+<!ATTLIST damage hor_start_position CDATA #REQUIRED>
+<!ATTLIST damage hor_end_position CDATA #REQUIRED>
+<!ATTLIST damage vert_start_position CDATA #REQUIRED>
+<!ATTLIST damage vert_end_position CDATA #REQUIRED>
+<!ATTLIST damage shape_description CDATA #REQUIRED>
+ 
+<!-- BEGINNING OF TEXT SECTION -->
+<!ELEMENT text (line|paragraph_break|list|insertion)*>
+<!ATTLIST text orientation (horizontal|vertical) "horizontal">
+<!ATTLIST text medium (ink|pencil) "ink">
+ 
+<!-- beginning of line section -->
+<!ELEMENT line (#PCDATA|strike_through|emphasis)*>
+<!ATTLIST line line_id CDATA #REQUIRED>
+ 
+<!ELEMENT strikethrough (#PCDATA)>
+<!ATTLIST strikethrough strike_type (single|double|other) "single">
+<!ATTLIST strikethrough medium (ink|pencil) "ink">
+ 
+<!ELEMENT emphasis (italics|bold|underline)*>
+<!ELEMENT italics (#PCDATA)>
+<!ELEMENT bold (#PCDATA)>
+<!ELEMENT underline (#PCDATA)>
+<!-- end of line section -->
+ 
+<!ELEMENT paragraph_break EMPTY>
+<!ATTLIST paragraph_break par_id CDATA #REQUIRED>
+ 
+ 
+<!-- beginning of list section -->
+<!ELEMENT list (list_header|list_item)*>
+<!ATTLIST list list_id CDATA #REQUIRED>
+<!ATTLIST list hor_start_position CDATA #REQUIRED>
+<!ATTLIST list hor_end_position CDATA #REQUIRED>
+<!ATTLIST list vert_start_position CDATA #REQUIRED>
+<!ATTLIST list vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT list_header (#PCDATA)>
+ 
+<!ELEMENT list_item (#PCDATA)>
+<!ATTLIST list_item item_id CDATA #REQUIRED>
+<!-- end of list section -->
+ 
+<!-- beginning of insertion section -->
+<!ELEMENT insertion (#PCDATA)>
+<!ATTLIST insertion orientation (horizontal|vertical) "horizontal">
+<!ATTLIST insertion hor_position CDATA #IMPLIED>
+<!ATTLIST insertion ver_position CDATA #IMPLIED>
+<!ATTLIST insertion interlinear (true|false) #IMPLIED>
+<!ATTLIST insertion function (note|addition|replacement) #IMPLIED>
+<!ATTLIST insertion between_lines CDATA #IMPLIED>
+<!ATTLIST insertion medium (ink|pencil) "ink">
+<!-- end of insertion section -->
+ 
+<!-- END OF TEXT SECTION-->
+ 
+ 
+<!--BEGINNING OF MARKING SECTION -->
+ 
+<!ELEMENT marking (container)+>
+<!ATTLIST marking medium (ink|pencil) "ink">
+ 
+<!ELEMENT container EMPTY> 
+<!ATTLIST container type (box|circle|s|x|v) #REQUIRED>
+<!ATTLIST container hor_start_position CDATA #REQUIRED>
+<!ATTLIST container hor_end_position CDATA #REQUIRED>
+<!ATTLIST container vert_start_position CDATA #REQUIRED>
+<!ATTLIST container vert_end_position CDATA #REQUIRED>
+<!ATTLIST container lines CDATA #IMPLIED>
+<!--oooooooooooooooooooooooooooooooooooo--> 
+<!-- Document Type Definition for Diplomatic Encoding of Walden --> 
+<!-- Created by DH 4888/6888 -->  
+<!--oooooooooooooooooooooooooooooooooooo--> 
+ 
+<!ELEMENT page (body|r_mar|l_mar|damage)*> 
+ 
+<!ELEMENT body (text|marking)*>
+<!--CDATA here will be grid marks--> 
+<!ATTLIST body hor_start_position CDATA #REQUIRED>
+<!ATTLIST body hor_end_position CDATA #REQUIRED>
+<!ATTLIST body vert_start_position CDATA #REQUIRED>
+<!ATTLIST body vert_end_position CDATA #REQUIRED>
+ 
+ 
+<!ELEMENT r_mar (marking|deletion|insertion)*>
+<!ATTLIST r_mar hor_start_position CDATA #REQUIRED>
+<!ATTLIST r_mar hor_end_position CDATA #REQUIRED>
+<!ATTLIST r_mar vert_start_position CDATA #REQUIRED>
+<!ATTLIST r_mar vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT l_mar (marking|deletion|insertion)*>
+<!ATTLIST l_mar hor_start_position CDATA #REQUIRED>
+<!ATTLIST l_mar hor_end_position CDATA #REQUIRED>
+<!ATTLIST l_mar vert_start_position CDATA #REQUIRED>
+<!ATTLIST l_mar vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT damage EMPTY>
+<!ATTLIST damage type (CDATA|blot|smear|hole) #REQUIRED>
+<!ATTLIST damage hor_start_position CDATA #REQUIRED>
+<!ATTLIST damage hor_end_position CDATA #REQUIRED>
+<!ATTLIST damage vert_start_position CDATA #REQUIRED>
+<!ATTLIST damage vert_end_position CDATA #REQUIRED>
+<!ATTLIST damage shape_description CDATA #REQUIRED>
+ 
+<!-- BEGINNING OF TEXT SECTION -->
+<!ELEMENT text (line|paragraph_break|list|insertion)*>
+<!ATTLIST text orientation (horizontal|vertical) "horizontal">
+<!ATTLIST text medium (ink|pencil) "ink">
+ 
+<!-- beginning of line section -->
+<!ELEMENT line (#PCDATA|strike_through|emphasis)*>
+<!ATTLIST line line_id CDATA #REQUIRED>
+ 
+<!ELEMENT strikethrough (#PCDATA)>
+<!ATTLIST strikethrough strike_type (single|double|other) "single">
+<!ATTLIST strikethrough medium (ink|pencil) "ink">
+ 
+<!ELEMENT emphasis (italics|bold|underline)*>
+<!ELEMENT italics (#PCDATA)>
+<!ELEMENT bold (#PCDATA)>
+<!ELEMENT underline (#PCDATA)>
+<!-- end of line section -->
+ 
+<!ELEMENT paragraph_break EMPTY>
+<!ATTLIST paragraph_break par_id CDATA #REQUIRED>
+ 
+ 
+<!-- beginning of list section -->
+<!ELEMENT list (list_header|list_item)*>
+<!ATTLIST list list_id CDATA #REQUIRED>
+<!ATTLIST list hor_start_position CDATA #REQUIRED>
+<!ATTLIST list hor_end_position CDATA #REQUIRED>
+<!ATTLIST list vert_start_position CDATA #REQUIRED>
+<!ATTLIST list vert_end_position CDATA #REQUIRED>
+ 
+<!ELEMENT list_header (#PCDATA)>
+ 
+<!ELEMENT list_item (#PCDATA)>
+<!ATTLIST list_item item_id CDATA #REQUIRED>
+<!-- end of list section -->
+ 
+<!-- beginning of insertion section -->
+<!ELEMENT insertion (#PCDATA)>
+<!ATTLIST insertion orientation (horizontal|vertical) "horizontal">
+<!ATTLIST insertion hor_position CDATA #IMPLIED>
+<!ATTLIST insertion ver_position CDATA #IMPLIED>
+<!ATTLIST insertion interlinear (true|false) #IMPLIED>
+<!ATTLIST insertion function (note|addition|replacement) #IMPLIED>
+<!ATTLIST insertion between_lines CDATA #IMPLIED>
+<!ATTLIST insertion medium (ink|pencil) "ink">
+<!-- end of insertion section -->
+ 
+<!-- END OF TEXT SECTION-->
+ 
+ 
+<!--BEGINNING OF MARKING SECTION -->
+ 
+<!ELEMENT marking (container)+>
+<!ATTLIST marking medium (ink|pencil) "ink">
+ 
+<!ELEMENT container EMPTY> 
+<!ATTLIST container type (box|circle|s|x|v) #REQUIRED>
+<!ATTLIST container hor_start_position CDATA #REQUIRED>
+<!ATTLIST container hor_end_position CDATA #REQUIRED>
+<!ATTLIST container vert_start_position CDATA #REQUIRED>
+<!ATTLIST container vert_end_position CDATA #REQUIRED>
+<!ATTLIST container lines CDATA #IMPLIED>

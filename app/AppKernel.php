@@ -16,7 +16,13 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+            new Knp\Bundle\GaufretteBundle\KnpGaufretteBundle(),
+            new Vich\UploaderBundle\VichUploaderBundle(),
             new Digitalthoreau\UserBundle\DigitalthoreauUserBundle(),
+            new Digitalthoreau\FileBundle\DigitalthoreauFileBundle(),
+            new Digitalthoreau\CommentBundle\DigitalthoreauCommentBundle(),
+            new Digitalthoreau\HomeBundle\DigitalthoreauHomeBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

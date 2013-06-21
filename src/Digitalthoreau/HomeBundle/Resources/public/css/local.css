@@ -1,0 +1,477 @@
+/* 
+    Document   : local
+    Created on : Mar 23, 2012, 9:24:24 PM
+    Author     : rlbaltha
+    Description:
+        Local additions to the Twitter Bootstrap base   
+*/
+/* 
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+
+.footer {margin-top: 3em;padding-top: 1em;border-top: grey solid 1px}
+
+.pad {min-height: 20px;  padding: 19px;  margin-bottom: 20px;}
+.pad1 {padding: 1em;}
+.pad05 {padding: .5em;}
+.row {margin-bottom: 1em;}
+/* 
+  Local mods for Twitter Bootstrap
+*/
+html, body {height:100%}
+body {background: url('../img/mosaic.png'); }
+h1 {font-size:26px;font-weight:normal}
+h1 small {font-size:20px;font-weight:normal}
+h2 {font-size:22px;font-weight:normal}
+h2 small {font-size:18px;font-weight:normal}
+h3 {font-size:20px;font-weight:normal}
+h3 small {font-size:16px;font-weight:normal}
+.centered {text-align: right;color:blue;}
+.center { float: none; margin-left: auto; margin-right: auto; }
+.background {background: #F2F2F2}
+.navbar .brand {margin-left:0px;}
+.navbar-inner {background:#373737;}
+ul.nav-list  {margin: 0 0 0 0;padding-left: 0;}
+#mainContainer {padding-top:60px;padding-left:15px;padding-right:15px;margin-left:auto;margin-right:auto;background:url('../img/whitewash.png');min-height:89%;
+-moz-box-shadow:0px 0px 15px rgba(0,0,0,.5);  
+-webkit-box-shadow:0px 0px 15px rgba(0,0,0,.5);  
+box-shadow: 0px 0px 15px rgba(0,0,0,.5);}
+.navbar-inner .container {margin-left:auto;margin-right:auto;}
+.page-header {margin-top:15px;margin-bottom:25px;}
+.subnav-fixed {margin-top: -20px;}
+.icon-white {margin-left:12px;}	
+.navbar-icon {margin-left: -2.5em;}
+.nav-list .btn-primary {width:7em;margin-left:0;margin-bottom:.7em;}
+.nav-list .btn-group button {width:9em;margin-left:0;margin-bottom:.7em;}
+.nav-list li a {width:7em;margin-left:0}
+.caret {margin-top: .5em}
+.cell {float:left}
+.doc {background-color: white; border-color: gray;}
+label.inline {display:block;clear:both;width:100%;}
+div.inline input {display:inline;}
+div.inline label {display:inline;padding:.5em;}
+input#remember_me {display:block;clear:left}
+dl.dl-horizontal dd p {display:inline}
+.accordion {float:left; width:180px}
+.files {height:.5em;}
+.width30 {width:30em;}
+
+
+.navbar .nav > li > a {color: #fff;text-shadow: none;}
+.navbar .nav > li > a:focus {color: #999;text-shadow: none; outline: thin dotted white;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;}
+.navbar .nav > li > a:hover {color: #999;}
+.nav-list .active > a {background-color:#006DCC;}
+.nav-pills .active > a {background-color:#006DCC;}
+.navbar .brand {color: #fff;text-shadow: none;}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+  .navbar .nav > li > a {
+      padding:10px;
+  }
+  .navbar-icon {
+      margin-left:-1.8em;
+  }
+}
+
+
+.label {font-weight: normal;}
+label.required:first-child{font-weight:bold;}
+#file_modal .modal-footer {padding:6px 15px 6px;}
+label.required[for=marca_filebundle_filetype_url] {text-transform:uppercase;}
+input#marca_filebundle_filetype_name,input#marca_filebundle_filetype_url {padding-bottom:0;margin-bottom:0;}
+.label-margin-bottom{margin-bottom:15px;}
+.modal-header {margin-bottom:-15px;}
+
+a {color: #006DCC;text-decoration: none;}
+a:hover {color: #006DCC;text-decoration: underline;}
+
+.clear {clear:left}
+.border {border: solid gray 1px}
+.divider {margin-top: 2em; border-bottom: 1px solid #e5e5e5; }
+.pad-left {padding-left: 3em}
+.margin-left {margin-left: 1em}
+.margin-top {margin-top: 1em}
+.margin-bottom {margin-bottom: 1em}
+.toggle {display:none;}
+.note { width: 150px; height: 150px; padding: 0.5em; background: yellow;}
+.inline li {display: inline;}
+.inline {display: inline;}
+.table th, .table td {padding:4px;line-height: 25px;}
+.fc-event-title {cursor: pointer;cursor: hand;}
+.fc-event-time {cursor: pointer;cursor: hand;}
+
+form label.radio {clear:right;display:block;padding-top: .5em;}
+form label.checkbox {clear:right;display:block;padding-top: .5em; }
+div.radio label {clear:right;display:block;}
+#marca_forumbundle_forumtype_title {width:37em;}
+label.required {font-size:14px;margin-top:8px;}
+.inline label {font-size:14px;margin-top:8px;}
+.forum_title,.journal-title {font-size:24px;}
+.forum_comments {margin-left:14px;}
+#forum_nav_title {color:#333333;}
+.margin-top {margin-top:8px;}
+#doc-display {overflow:auto;margin-bottom: 0px;}
+.doc-body {margin:5em;}
+#doctools { overflow:auto; margin-top:6px; position:fixed; margin-left: -1em; }
+.journal-body p, .forum-body p, .doc-body p {font-size: 14px;line-height: 200%;margin-bottom:27px;}
+.journal-body {margin-bottom:60px;}
+.responses {font-size:14px;}
+.btn-delete {margin-top: -3.5em; float: right; }
+#note_sub {overflow:auto;margin-bottom: 0px;}
+#note_list {overflow:auto;margin-bottom: 0px;}
+
+
+td.active {  color: #333333;
+  background-color: #e6e6e6;
+}
+
+form ul li {list-style: none;}
+
+/* TB Modal adjustments */
+#file_modal .modal-footer {
+    margin-bottom: -25px;
+}
+#markup {width:100%;}
+#project_nav {padding:5px;padding-left: 20px;padding-right: 20px;margin-bottom:5px;}
+#project_breadcrumbs {padding:0px;padding-left: 20px;padding-right: 20px;}
+#project_nav_pills {padding:0px;margin-bottom:0px;}
+
+#findBy_nav {padding:5px;padding-left: 20px;padding-right: 20px;margin-bottom:5px;}
+#findBy_nav_pills {padding:0px;margin-bottom:6px;}
+
+.pagination span {
+  display: inline;
+}
+
+.label-file {background:#3a87ad; width:2em;text-align: center}
+
+
+.pagination span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-left-width: 0;
+}
+
+.pagination span:hover {
+  background-color: #f5f5f5;
+}
+
+.pagination span.current {
+  color: #999999;
+  cursor: default;
+}
+
+.pagination span.disabled > a:hover {
+  color: #999999;
+  cursor: default;
+  background-color: transparent;
+}
+
+.pagination span:first-child  {
+  border-left-width: 1px;
+  -webkit-border-bottom-left-radius: 4px;
+          border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+          border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-topleft: 4px;
+}
+
+.pagination span:last-child  {
+  -webkit-border-top-right-radius: 4px;
+          border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+}
+
+
+.popover {position:fixed; left:40%; top:135px;padding:2em;}
+
+/* 
+   Doc displays
+*/
+
+.eDoc_note {color:blue;background:white; border:#e3e3e3 1px solid;border-radius: 0px 4px 4px 0px;margin-left:-1px;margin-right: 4px;padding:2px 2px 2px 6px;}
+.eDoc_highlight {background:#FFFFD3;padding:2px 2px 2px 6px;border:#e3e3e3 1px solid;border-radius: 4px 0px 0px 4px;}
+.eDoc_error {background:#bcd85f;padding:1px;}
+.eDoc_hanging_indent {text-indent:-0.5in; margin-left:0.5in;line-height: 200%;}
+.eDoc_paragraph_indent {text-indent:0.5in; line-height: 200%;}
+.eDoc_single_space {line-height: 100%;}
+.eDoc_double_space {line-height: 200%;}
+.eDoc_super {color:blue; vertical-align: super;font-size: smaller; line-height: normal;}
+.blue {color:blue; margin-right: 1em;}
+.context {background:#b6e4ff;padding:1px;}
+.author {background:#ffd8b6;padding:1px;}
+.topic {background:#bfb6ff;padding:1px;}
+.purpose {background:#fffa79;padding:1px;}
+.audience {background:#cdc95f;padding:1px;}
+.adjective {background:#ff8e62;padding:1px;}
+.adverb {background:#ff6296;padding:1px;}
+.predicate {background:#5f75c4;padding:1px;}
+.thesis {background:#a6a8ff;padding:1px;}
+.topic_sentence {background:#7fe3c8;padding:1px;}
+.transition {background:#d97fe3;padding:1px;}
+.support {background:#e2e37f;padding:1px;}
+.significant {background:#ea7a94;padding:1px;}
+.key_concepts {background:#7a80ea;padding:1px;}
+.connections {background:#7aea87;padding:1px;}
+.needs_defining {background:#eae47a;padding:1px;}
+.unclear {background:#7aeadc;padding:1px;}
+.argument {background:#47a936;padding:1px;}
+.evidence {background:#ffdf0b;padding:1px;}
+.interpretation {background:#4e52ff;padding:1px;}
+.ethos {background:#BC80CC;color:#000;padding:1px;}
+.pathos {background:#FCFC7C;color:#000;padding:1px;}
+.logos {background:#C8B613;color:#000;padding:1px;}
+.highlight {background:#FFFFD3}
+.markup  {
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+          padding: 2px 4px;
+}
+
+
+.aliceblue {background:#f0f8ff;}
+.antiquewhite {background:#faebd7;}
+.aqua {background:#0ff;}
+.aquamarine {background:#7fffd4;}
+.azure {background:#f0ffff;}
+.beige {background:#f5f5dc;}
+.bisque {background:#ffe4c4;}
+.black {background:#000;}
+.blanchedalmond {background:#ffebcd;}
+.blueviolet {background:#8a2be2;}
+.brown {background:#a52a2a;}
+.burlywood {background:#deb887;}
+.burntsienna {background:#ea7e5d;}
+.cadetblue {background:#5f9ea0;}
+.chartreuse {background:#7fff00;}
+.chocolate {background:#d2691e;}
+.coral {background:#ff7f50;}
+.cornflowerblue {background:#6495ed;}
+.cornsilk {background:#fff8dc;}
+.crimson {background:#dc143c;}
+.cyan {background:#0ff;}
+.darkblue {background:#00008b;}
+.darkcyan {background:#008b8b;}
+.darkgoldenrod {background:#b8860b;}
+.darkgray {background:#a9a9a9;}
+.darkgreen {background:#006400;}
+.darkgrey {background:#a9a9a9;}
+.darkkhaki {background:#bdb76b;}
+.darkmagenta {background:#8b008b;}
+.darkolivegreen {background:#556b2f;}
+.darkorange {background:#ff8c00;}
+.darkorchid {background:#9932cc;}
+.darkred {background:#8b0000;}
+.darksalmon {background:#e9967a;}
+.darkseagreen {background:#8fbc8f;}
+.darkslateblue {background:#483d8b;}
+.darkslategray {background:#2f4f4f;}
+.darkslategrey {background:#2f4f4f;}
+.darkturquoise {background:#00ced1;}
+.darkviolet {background:#9400d3;}
+.deeppink {background:#ff1493;}
+.deepskyblue {background:#00bfff;}
+.dimgray {background:#696969;}
+.dimgrey {background:#696969;}
+.dodgerblue {background:#1e90ff;}
+.firebrick {background:#b22222;}
+.floralwhite {background:#fffaf0;}
+.forestgreen {background:#228b22;}
+.fuchsia {background:#f0f;}
+.gainsboro {background:#dcdcdc;}
+.ghostwhite {background:#f8f8ff;}
+.gold {background:#ffd700;}
+.goldenrod {background:#daa520;}
+.gray {background:#808080;}
+.green {background:#008000;}
+.greenyellow {background:#adff2f;}
+.grey {background:#808080;}
+.honeydew {background:#f0fff0;}
+.hotpink {background:#ff69b4;}
+.indianred {background:#cd5c5c;}
+.indigo {background:#4b0082;}
+.ivory {background:#fffff0;}
+.khaki {background:#f0e68c;}
+.lavender {background:#e6e6fa;}
+.lavenderblush {background:#fff0f5;}
+.lawngreen {background:#7cfc00;}
+.lemonchiffon {background:#fffacd;}
+.lightblue {background:#add8e6;}
+.lightcoral {background:#f08080;}
+.lightcyan {background:#e0ffff;}
+.lightgoldenrodyellow {background:#fafad2;}
+.lightgray {background:#d3d3d3;}
+.lightgreen {background:#90ee90;}
+.lightgrey {background:#d3d3d3;}
+.lightpink {background:#ffb6c1;}
+.lightsalmon {background:#ffa07a;}
+.lightseagreen {background:#20b2aa;}
+.lightskyblue {background:#87cefa;}
+.lightslategray {background:#789;}
+.lightslategrey {background:#789;}
+.lightsteelblue {background:#b0c4de;}
+.lightyellow {background:#ffffe0;}
+.lime {background:#0f0;}
+.limegreen {background:#32cd32;}
+.linen {background:#faf0e6;}
+.magenta {background:#f0f;}
+.maroon {background:#800000;}
+.mediumaquamarine {background:#66cdaa;}
+.mediumblue {background:#0000cd;}
+.mediumorchid {background:#ba55d3;}
+.mediumpurple {background:#9370db;}
+.mediumseagreen {background:#3cb371;}
+.mediumslateblue {background:#7b68ee;}
+.mediumspringgreen {background:#00fa9a;}
+.mediumturquoise {background:#48d1cc;}
+.mediumvioletred {background:#c71585;}
+.midnightblue {background:#191970;}
+.mintcream {background:#f5fffa;}
+.mistyrose {background:#ffe4e1;}
+.moccasin {background:#ffe4b5;}
+.navajowhite {background:#ffdead;}
+.navy {background:#000080;}
+.oldlace {background:#fdf5e6;}
+.olive {background:#808000;}
+.olivedrab {background:#6b8e23;}
+.orange {background:#ffa500;}
+.orangered {background:#ff4500;}
+.orchid {background:#da70d6;}
+.palegoldenrod {background:#eee8aa;}
+.palegreen {background:#98fb98;}
+.paleturquoise {background:#afeeee;}
+.palevioletred {background:#db7093;}
+.papayawhip {background:#ffefd5;}
+.peachpuff {background:#ffdab9;}
+.peru {background:#cd853f;}
+.pink {background:#ffc0cb;}
+.plum {background:#dda0dd;}
+.powderblue {background:#b0e0e6;}
+.purple {background:#800080;}
+.red {background:#f00;}
+.rosybrown {background:#bc8f8f;}
+.royalblue {background:#4169e1;}
+.saddlebrown {background:#8b4513;}
+.salmon {background:#fa8072;}
+.sandybrown {background:#f4a460;}
+.seagreen {background:#2e8b57;}
+.seashell {background:#fff5ee;}
+.sienna {background:#a0522d;}
+.silver {background:#c0c0c0;}
+.skyblue {background:#87ceeb;}
+.slateblue {background:#6a5acd;}
+.slategray {background:#708090;}
+.slategrey {background:#708090;}
+.snow {background:#fffafa;}
+.springgreen {background:#00ff7f;}
+.steelblue {background:#4682b4;}
+.tan {background:#d2b48c;}
+.teal {background:#008080;}
+.thistle {background:#d8bfd8;}
+.tomato {background:#ff6347;}
+.turquoise {background:#40e0d0;}
+.violet {background:#ee82ee;}
+.wheat {background:#f5deb3;}
+.white {background:#fff;}
+.whitesmoke {background:#f5f5f5;}
+.yellow {background:#ff0;}
+.yellowgreen {background:#9acd32;}
+            
+
+.tc1 {background:#8db14f;}
+.tc2 {background:#D1AD06;}
+.tc3 {background:#4fb1a9;}
+.tc4 {background:#4F78B1;}
+.tc5 {background:#764FB1;}
+.tc6 {background:#B14F8B;}
+.tc7 {background:#B14F4F;}
+.tc8 {background:#B1754F;}
+.tc9 {background:#4FB1AF;}
+
+
+::-webkit-scrollbar {
+    height: 12px;
+	width: 8px;
+	background: #ccc;
+    }
+::-webkit-scrollbar-thumb {
+    background: #393812;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+/* 
+   Accessibility
+*/
+
+div#skipmenu{
+position:relative;
+}
+div#skipmenu a.skippy{
+position:absolute;
+top: -1000px;
+left:-1000px;
+height: 1px;
+width: 1px;
+overflow:hidden;
+}
+
+div#skipmenu a.skippy:active, div#skipmenu a.skippy:focus, div#skipmenu a.skippy:hover{
+position: absolute;
+top:auto;
+left:auto;
+height: 1em;
+font-size:1em;
+width:99%;  
+padding-bottom:15px;
+padding-top:10px;
+padding-right:10px;
+
+color: white;
+z-index:10000;
+text-align:right;
+background: #373737;
+}
+
+.well-header {
+padding: 9px 15px;
+border-bottom: 1px solid #eee;
+background-color: #F0F0F0;
+margin-top: 0;
+border-bottom: 1px solid #ddd;
+-webkit-border-radius: 6px 6px 0 0 ;
+-moz-border-radius: 6px 6px 0 0 ;
+border-radius: 6px 6px 0 0 ;
+-webkit-box-shadow: inset 0 1px 0 #ffffff;
+-moz-box-shadow: inset 0 1px 0 #ffffff;
+box-shadow: inset 0 1px 0 #ffffff;
+}
+
+.well-footer {
+padding: 14px 15px 15px;
+margin-bottom: 0;
+text-align: right;
+background-color: #F0F0F0;
+border-top: 1px solid #ddd;
+-webkit-border-radius: 0 0 6px 6px;
+-moz-border-radius: 0 0 6px 6px;
+border-radius: 0 0 6px 6px;
+-webkit-box-shadow: inset 0 1px 0 #ffffff;
+-moz-box-shadow: inset 0 1px 0 #ffffff;
+box-shadow: inset 0 1px 0 #ffffff;
+}

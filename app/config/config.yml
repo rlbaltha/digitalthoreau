@@ -1,10 +1,11 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: "@DigitalthoreauFileBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
-    #translator:      { fallback: %locale% }
+    translator: ~
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -63,3 +64,26 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
+
+#FOS UserBundle Configuratio  
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: Digitalthoreau\UserBundle\Entity\User
+    from_email:
+        address:        rlbaltha@uga.edu
+        sender_name:    Henry
+                 
+vich_uploader:
+    db_driver: orm # or mongodb
+    twig: true
+    gaufrette: false 
+    storage: vich_uploader.storage.file_system
+    mappings:
+        file_file:
+            uri_prefix: %kernel.root_dir%/../uploads
+            upload_destination: %kernel.root_dir%/../uploads
+            namer: namer.upload_file
+            directory_namer: directory_namer.upload_file
+            delete_on_remove: true
+            inject_on_load: true         
