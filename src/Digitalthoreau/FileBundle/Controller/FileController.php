@@ -142,6 +142,7 @@ class FileController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $entity = $em->getRepository('DigitalthoreauFileBundle:File')->find($id);
+        $entities = $em->getRepository('DigitalthoreauFileBundle:File')->findAll();
 
         if (!$entity) {
             throw $this->createNotFoundException('Unable to find File entity.');
@@ -150,7 +151,8 @@ class FileController extends Controller
         $deleteForm = $this->createDeleteForm($id);
 
         return array(
-            'entity'      => $entity,
+            'file'      => $entity,
+            'files'      => $entities,
             'delete_form' => $deleteForm->createView(),
         );
     }
@@ -207,7 +209,7 @@ class FileController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('file_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('file_show', array('id' => $id)));
         }
 
         return array(

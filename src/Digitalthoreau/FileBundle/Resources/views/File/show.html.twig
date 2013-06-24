@@ -6,19 +6,54 @@
     <h1>File</h1>
 
     <table class="table">
-        <tbody>
+        <thead>
             <tr>
-                <th>Name</th>
-                <td>{{ entity.name }}</td>
-            </tr>
-            <tr>
+                <th>Name</th
                 <th>Type</th>
-                <td>{{ entity.type }}</td>
-            </tr>
-            <tr>
+                <th>MS Image</th>
                 <th>Path</th>
-                <td>{{ entity.path }}</td>
+                <th>Actions</th>
             </tr>
+        </thead>
+        <tbody>
+        
+            <tr>
+                <td><span class="label">{{ file.ext }}</span> <a href="{{ path('file_show', { 'id': file.id }) }}">{{ file.name }}</a></td>
+                <td>{{ file.type }}</td>
+                <td>
+                    {{ file.path }}
+                        
+                    {% if file.manuscriptimage %}
+                    <a  class="" href="{{ path('file_view', { 'id': file.manuscriptimage.id }) }}">MS image</a>
+                    {% endif %}
+                </td>
+                <td>
+                <ul class="nav files">
+                    <li class="dropdown">
+                    <a title="Transformation with xsl" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" id="dLabel">Transform<b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        {% for xsl_file in files if xsl_file.type == 2 %}
+                            <li><a class='' href="{{ path('file_transform', { 'xml_id': file.id, 'xsl_id': xsl_file.id }) }}">{{ xsl_file.name }}</a></li>
+                        {% endfor %}
+                       </ul>
+                   </li>
+                </ul>
+                </td>
+                <td>
+                <ul class="inline">
+                    <li>
+                        <a  class="" href="{{ path('file_view', { 'id': file.id }) }}">Show/Download</a>
+                    </li>
+                    <li>
+                        <a  class="" href="{{ path('file_show', { 'id': file.id }) }}">Show info</a>
+                    </li>
+                    <li>
+                        <a  class="" href="{{ path('file_edit', { 'id': file.id }) }}">Edit info</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+
         </tbody>
     </table>
 
@@ -29,12 +64,12 @@
         </a>
     </li>
     <li>
-        <a  class="btn" href="{{ path('file_edit', { 'id': entity.id }) }}">
+        <a  class="btn" href="{{ path('file_edit', { 'id': file.id }) }}">
             Edit
         </a>
     </li>
     <li>
-        <form action="{{ path('file_delete', { 'id': entity.id }) }}" method="post">
+        <form action="{{ path('file_delete', { 'id': file.id }) }}" method="post">
             <input type="hidden" name="_method" value="DELETE" />
             {{ form_widget(delete_form) }}
             <button  class="btn" type="submit">Delete</button>

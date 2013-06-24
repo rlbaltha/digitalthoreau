@@ -17,8 +17,8 @@ class File
 {
      /**
      *@Assert\File(
-     *     maxSize="10M",
-     *     mimeTypes={"image/png", "image/jpeg", "text/xml", "text/html", "application/xml"}
+     *     maxSize="20M",
+     *     mimeTypes={"image/png", "image/jpeg", "image/tiff", "text/xml", "text/html", "application/xml"}
      * )
      * @Vich\UploadableField(mapping="file_file", fileNameProperty="path")
      *
@@ -55,6 +55,12 @@ class File
      * @ORM\Column(name="path", type="string", length=255, nullable=true)
      */
     private $path;
+    
+    /**
+     * @ORM\OneToOne(targetEntity="Digitalthoreau\FileBundle\Entity\File")
+     * @ORM\JoinColumn(name="file_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
+     */
+    protected $manuscriptimage;      
 
 
     /**
@@ -166,4 +172,29 @@ class File
         $filename = $this->getPath(); 
         return pathinfo($filename, PATHINFO_EXTENSION);
     }     
+
+
+
+    /**
+     * Set manuscriptimage
+     *
+     * @param \Digitalthoreau\FileBundle\Entity\File $manuscriptimage
+     * @return File
+     */
+    public function setManuscriptimage(\Digitalthoreau\FileBundle\Entity\File $manuscriptimage = null)
+    {
+        $this->manuscriptimage = $manuscriptimage;
+    
+        return $this;
+    }
+
+    /**
+     * Get manuscriptimage
+     *
+     * @return \Digitalthoreau\FileBundle\Entity\File 
+     */
+    public function getManuscriptimage()
+    {
+        return $this->manuscriptimage;
+    }
 }
