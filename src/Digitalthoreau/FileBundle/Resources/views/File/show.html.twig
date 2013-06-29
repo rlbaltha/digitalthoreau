@@ -28,10 +28,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name</th
-                <th>Type</th>
+                <th>Name</th>
                 <th>MS Image</th>
                 <th>Path</th>
+                <th>Transformation</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -39,13 +39,12 @@
         
             <tr>
                 <td><span class="label">{{ file.ext }}</span> <a href="{{ path('file_show', { 'id': file.id }) }}">{{ file.name }}</a></td>
-                <td>{{ file.type }}</td>
-                <td>
-                    {{ file.path }}
-                        
-                    {% if file.manuscriptimage %}
+                <td>{% if file.manuscriptimage %}
                     <a  class="" href="{{ path('file_view', { 'id': file.manuscriptimage.id }) }}">MS image</a>
                     {% endif %}
+                </td>
+                <td>
+                    {{ file.path }} 
                 </td>
                 <td>
                 <ul class="nav files">
