@@ -5,6 +5,26 @@
 {% block body -%}
     <h1>File</h1>
 
+ <ul class="inline">
+    <li>
+        <a class="btn" href="{{ path('file') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a  class="btn" href="{{ path('file_edit', { 'id': file.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('file_delete', { 'id': file.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button  class="btn" type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+    
     <table class="table">
         <thead>
             <tr>
@@ -57,23 +77,6 @@
         </tbody>
     </table>
 
-        <ul class="inline">
-    <li>
-        <a class="btn" href="{{ path('file') }}">
-            Back to the list
-        </a>
-    </li>
-    <li>
-        <a  class="btn" href="{{ path('file_edit', { 'id': file.id }) }}">
-            Edit
-        </a>
-    </li>
-    <li>
-        <form action="{{ path('file_delete', { 'id': file.id }) }}" method="post">
-            <input type="hidden" name="_method" value="DELETE" />
-            {{ form_widget(delete_form) }}
-            <button  class="btn" type="submit">Delete</button>
-        </form>
-    </li>
-</ul>
+    <div class="span11 well"><h2>Notes</h2>{{file.notes|raw}}</div>
+
 {% endblock %}

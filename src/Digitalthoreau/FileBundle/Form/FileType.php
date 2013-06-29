@@ -13,7 +13,7 @@ class FileType extends AbstractType
         $builder
             ->add('name')
             ->add('type')
-            ->add('manuscript_image')  
+            ->add('notes')  
             ->add('manuscript_image', 'entity', array('class' => 'DigitalthoreauFileBundle:File','property'=>'name', 'query_builder' => 
                  function(\Digitalthoreau\FileBundle\Entity\FileRepository $er) {
                  return $er->createQueryBuilder('f')

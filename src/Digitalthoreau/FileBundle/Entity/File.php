@@ -60,7 +60,14 @@ class File
      * @ORM\OneToOne(targetEntity="Digitalthoreau\FileBundle\Entity\File")
      * @ORM\JoinColumn(name="file_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
      */
-    protected $manuscriptimage;      
+    protected $manuscriptimage; 
+    
+    /**
+     * @var text $notes
+     *
+     * @ORM\Column(name="notes", type="text")
+     */
+    private $notes;    
 
 
     /**
@@ -196,5 +203,28 @@ class File
     public function getManuscriptimage()
     {
         return $this->manuscriptimage;
+    }
+
+    /**
+     * Set notes
+     *
+     * @param string $notes
+     * @return File
+     */
+    public function setNotes($notes)
+    {
+        $this->notes = $notes;
+    
+        return $this;
+    }
+
+    /**
+     * Get notes
+     *
+     * @return string 
+     */
+    public function getNotes()
+    {
+        return $this->notes;
     }
 }
